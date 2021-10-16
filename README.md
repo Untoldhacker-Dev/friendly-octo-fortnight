@@ -3,4 +3,4 @@
 <p>Main Menu: 💰 Balance , ⚙️Set wallet , 👫 Referral , 🎁 Daily Bonus , ⛽ Stats</p>
 
 
-![Main Menu](https://t.me/DarkLaboratory/4)
+<img src = 'https://t.me/DarkLaboratory/4'>Hi</img>
