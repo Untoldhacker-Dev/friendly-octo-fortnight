@@ -4,3 +4,6 @@
 
 
 ![Main Menu](https://github.com/Untoldhacker-Dev/friendly-octo-fortnight/blob/BB_Export_1634291956/%5C/Screenshot_2021-10-16-07-47-03-370.jpeg)
+
+<p> Admin Panel: -/-
+![Admin Panel](https://github.com/Untoldhacker-Dev/friendly-octo-fortnight/blob/BB_Export_1634291956/%5C/Screenshot_2021-10-16-07-56-53-706.jpeg)
