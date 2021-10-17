@@ -1,5 +1,5 @@
 /*CMD
-  command: ⚙️Set wallet
+  command: ⚙️ Set wallet
   help: 
   need_reply: true
   auto_retry_time: 
