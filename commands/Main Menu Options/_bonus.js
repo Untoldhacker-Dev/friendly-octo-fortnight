@@ -1,12 +1,12 @@
 /*CMD
-  command: 🎁 Daily Bonus
+  command: /bonus
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: 
+  folder: Main Menu Options
   answer: 
   keyboard: 
-  aliases: 
+  aliases: 🎁 daily bonus
 CMD*/
 
 var currency = Bot.getProperty("cur")

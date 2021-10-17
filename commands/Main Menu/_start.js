@@ -3,7 +3,7 @@
   help: 
   need_reply: false
   auto_retry_time: 
-  folder: 
+  folder: Main Menu
   answer: 
   keyboard: 
   aliases: 
@@ -67,7 +67,7 @@ status.add(+1)
 Bot.setProperty("new_user", false)
 }
 Bot.sendKeyboard(
-  "💰 Balance,⚙️ Set wallet\n👫 Referral,💲Withdraw\n🎁 Daily Bonus,⛽ Stats",
+  "💰 Balance,⚙️Set wallet\n👫 Referral,💲Withdraw\n🎁 Daily Bonus,⛽ Stats",
   "*Welcome!*"
 )
 

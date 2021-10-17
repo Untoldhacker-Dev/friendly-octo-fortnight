@@ -3,7 +3,7 @@
   help: 
   need_reply: true
   auto_retry_time: 
-  folder: 
+  folder: Admin
   answer: *Send the user's Telegram ID to ban?*
   keyboard: 
   aliases: 

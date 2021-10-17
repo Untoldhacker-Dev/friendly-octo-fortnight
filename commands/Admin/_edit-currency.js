@@ -3,7 +3,7 @@
   help: 
   need_reply: true
   auto_retry_time: 
-  folder: 
+  folder: Admin
   answer: *Enter the new Currency for bot.*
   keyboard: 
   aliases: 

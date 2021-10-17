@@ -3,7 +3,7 @@
   help: 
   need_reply: true
   auto_retry_time: 
-  folder: 
+  folder: Admin
   answer: *Please Enter the amount of Bonus to set.*
   keyboard: 
   aliases: 

@@ -1,12 +1,12 @@
 /*CMD
-  command: ⚙️ Set wallet
+  command: /setWallet
   help: 
   need_reply: true
   auto_retry_time: 
-  folder: 
+  folder: Main Menu Options
   answer: *Please Enter Your Wallet Address.*
   keyboard: 
-  aliases: 
+  aliases: ⚙️set wallet
 CMD*/
 
 let wallet = User.getProperty("wallet")

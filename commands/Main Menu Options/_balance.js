@@ -1,12 +1,12 @@
 /*CMD
-  command: 💰 Balance
+  command: /balance
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: 
+  folder: Main Menu Options
   answer: 
   keyboard: 
-  aliases: 
+  aliases: 💰 balance
 CMD*/
 
 var balance = Libs.ResourcesLib.userRes("balance")
