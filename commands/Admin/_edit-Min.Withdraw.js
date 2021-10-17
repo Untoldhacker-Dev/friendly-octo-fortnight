@@ -12,9 +12,6 @@ CMD*/
 if(!isAdmin()){return}
 let value = message
 
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n)
-}
 if (!isNumeric(value)) {
   Bot.sendMessage("*📛 Invaild value. Enter only numeric value. Try again*", {
     is_reply: true
