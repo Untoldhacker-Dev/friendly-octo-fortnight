@@ -21,4 +21,11 @@ if (stat == true) {
   Bot.sendMessage("*You're Banned.*")
   return
 }
+function isNumeric(n) {
+
+  return !isNaN(parseFloat(n)) && isFinite(n)
+
+}
+
+
 
