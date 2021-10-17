@@ -11,7 +11,7 @@ CMD*/
 
 function isAdmin() {
   var admin_chat = Bot.getProperty("admin_chat")
-  if ( admin_chat == user.telegramid ){
+  if ( command.folder == "Admin" && admin_chat == user.telegramid ){
     return true
   }
   return false
