@@ -1,12 +1,12 @@
 /*CMD
-  command: 💲Withdraw
+  command: /withdraw
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: 
+  folder: Main Menu Options
   answer: 
   keyboard: 
-  aliases: 
+  aliases: 💲withdraw
 CMD*/
 
 var min = Bot.getProperty("min")

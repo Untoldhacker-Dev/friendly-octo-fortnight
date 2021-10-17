@@ -3,7 +3,7 @@
   help: 
   need_reply: true
   auto_retry_time: 
-  folder: 
+  folder: Admin
   answer: *Enter user's Telegram id to send funds to?*
   keyboard: 
   aliases: 

@@ -1,12 +1,12 @@
 /*CMD
-  command: 👫 Referral
+  command: /referral
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: 
+  folder: Main Menu Options
   answer: 
   keyboard: 
-  aliases: 
+  aliases: 👫 referral
 CMD*/
 
 var comm = Bot.getProperty("comm")

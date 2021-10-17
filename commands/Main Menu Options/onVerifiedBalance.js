@@ -3,7 +3,7 @@
   help: 
   need_reply: true
   auto_retry_time: 
-  folder: 
+  folder: Main Menu Options
   answer: 
   keyboard: 
   aliases: 

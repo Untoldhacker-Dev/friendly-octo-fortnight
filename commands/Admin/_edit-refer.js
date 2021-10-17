@@ -1,17 +1,16 @@
 /*CMD
-  command: /edit-Min.Withdraw
+  command: /edit-refer
   help: 
   need_reply: true
   auto_retry_time: 
-  folder: 
-  answer: *Enter the amount of minimum withdraw to set.*
+  folder: Admin
+  answer: *Enter the amount of Refer commission to set.*
   keyboard: 
   aliases: 
 CMD*/
 
 if(!isAdmin()){return}
 let value = message
-let tgid = User.getProperty("id")
 
 function isNumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n)
@@ -22,6 +21,6 @@ if (!isNumeric(value)) {
   })
 
   return
-} else Bot.setProperty("min", message)
-Bot.sendMessage("*Minimum Withdraw set to: " + message + "*")
+} else Bot.setProperty("comm", message)
+Bot.sendMessage("*Referrals Comission Set to " + message + "*")
 

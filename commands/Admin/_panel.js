@@ -3,14 +3,13 @@
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: 
+  folder: Admin
   answer: 
   keyboard: 
   aliases: 
 CMD*/
 
-var admin = Bot.getProperty("admin_chat")
-if (user.telegramid == admin) {
+if (isAdmin()) {
   var keyboard = [
     [{ title: "✏️ Edit Bonus", command: "/edit-bonus" }],
     [{ title: "✏️Edit Refer Bonus", command: "/edit-refer" }],
