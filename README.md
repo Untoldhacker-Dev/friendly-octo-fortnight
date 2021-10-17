@@ -5,7 +5,7 @@
 # ⁪⁬⁮⁮           ⁪⁬⁮⁮           ⁪⁬⁮⁮     🎉 Powered by - [Bots.Business](https://Bots.Business)
 <hr>
 
-<p align="left"> <img src="https://github.com/Untoldhacker-Dev/pictoQue/blob/main/20211017_175237.jpg" alt="untoldhacker-dev" ; size = 1/> </p>
+<p align="left"> <img src="https://github.com/Untoldhacker-Dev/pictoQue/blob/main/20211017_175229.png" alt="untoldhacker-dev" ; size = 1/> </p>
 
 ## What it is?
 
