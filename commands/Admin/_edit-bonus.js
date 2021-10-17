@@ -14,9 +14,6 @@ let value = message
 let tgid = User.getProperty("id")
 let res = Libs.ResourcesLib.anotherUserRes("balance", tgid)
 
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n)
-}
 if (!isNumeric(value)) {
   Bot.sendMessage("*📛 Invaild value. Enter only numeric value. Try again*", {
     is_reply: true
