@@ -10,10 +10,10 @@
 CMD*/
 
 var msg = Bot.getProperty("welcome")
-var admin = Bot.getProperty("admin_chat")
+var admin_chat = Bot.getProperty("admin_chat")
 var bonus = Bot.getProperty("comm")
 var currency = Bot.getProperty("cur")
-if (!admin) {
+if (!admin_chat) {
   Bot.setProperty("admin_chat", user.telegramid)
   Bot.sendMessage(
     "You're the admin now, Use command /panel to open admin panel"
