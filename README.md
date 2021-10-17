@@ -1,5 +1,14 @@
 # friendly-octo-fortnight 
+<hr>
+
+
+# ⁪⁬⁮⁮           ⁪⁬⁮⁮           ⁪⁬⁮⁮     🎉 Powered by - [Bots.Business](https://Bots.Business)
+<hr>
+
+<p align="left"> <img src="https://github.com/Untoldhacker-Dev/pictoQue/blob/main/20211017_175237.jpg" alt="untoldhacker-dev" ; size = 1/> </p>
+
 ## What it is?
+
 
 This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
 
