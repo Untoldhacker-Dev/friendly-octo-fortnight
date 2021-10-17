@@ -1,5 +1,5 @@
 # friendly-octo-fortnight 
-⁉️ <b>[View Detailed Function](https://github.com/Untoldhacker-Dev/friendly-octo-fortnight/tree/BB_Export_1634291956/command-functions)</b>
+
 <h3> Repository For DemoReferEarnBot to be published in the BBStore, Detailed Functions: </h3>
 <p>👥Main Menu: 💰 Balance , ⚙️Set wallet , 👫 Referral , 🎁 Daily Bonus , ⛽ Stats</p>
 
