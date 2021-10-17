@@ -10,8 +10,8 @@
 CMD*/
 
 function isAdmin() {
-  var admin = Bot.getProperty("admin_chat")
-  if (user.telegramid == admin) {
+  var admin_chat = Bot.getProperty("admin_chat")
+  if (user.telegramid == admin_chat) {
     return true
   }
   return false
