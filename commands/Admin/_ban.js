@@ -13,7 +13,7 @@ if(!isAdmin()){return}
 if (user.telegramid == message) {
   Bot.sendMessage("Error: 404, User is not found!")
   return
-} else Bot.setProperty(message + "ban", true)
+} else Bot.blockChat(message)
 Bot.sendMessage(
   "Successfully banned: " +
     "[" +
