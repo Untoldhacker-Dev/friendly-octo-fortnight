@@ -9,13 +9,10 @@
   aliases: 
 CMD*/
 
-function isAdmin() {
   var admin_chat = Bot.getProperty("admin_chat")
-  if ( command.folder == "Admin" && admin_chat == user.telegramid ){
-    return true
+  if ( command.folder == "Admin" && admin_chat =! user.telegramid ){
+    return 
   }
-  return false
-}
 
 function isNumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n)
