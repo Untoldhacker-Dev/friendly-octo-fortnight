@@ -9,7 +9,6 @@
   aliases: 🎁 daily bonus
 CMD*/
 
-var currency = Bot.getProperty("cur")
 function canRun() {
   var last_run_at = User.getProperty("last_run_atr")
   if (!last_run_at) {
@@ -48,7 +47,6 @@ if (!bonus) {
   Bot.sendMessage("*Oops! Daily Bonus is Unavailable. As it is not set by Admin.*")
   return
 }
-let balance = Libs.ResourcesLib.userRes("balance")
 balance.add(+bonus)
 Bot.sendMessage("*🎁 Congrats , You Received +" + bonus + " " + currency + "!*")
 
