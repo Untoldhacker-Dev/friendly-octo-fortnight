@@ -9,7 +9,6 @@
   aliases: 
 CMD*/
 
-if(!isAdmin()){return}
 let value = message
 
 if (!isNumeric(value)) {
