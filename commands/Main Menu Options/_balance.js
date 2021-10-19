@@ -9,7 +9,6 @@
   aliases: 💰 balance
 CMD*/
 
-var balance = Libs.ResourcesLib.userRes("balance")
 Bot.sendMessage(
   "*✏️ User : *" +
      Libs.commonLib.getLinkFor(user)+
