@@ -9,6 +9,6 @@
   aliases: 
 CMD*/
 
-Bot.setProperty("cur", message)
+Bot.setProperty("curency_Name", message)
 Bot.sendMessage("*The Bot's Currency is set To: " + message + "*")
 
