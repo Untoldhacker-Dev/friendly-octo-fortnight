@@ -9,7 +9,6 @@
   aliases: 
 CMD*/
 
-if (isAdmin()) {
   var keyboard = [
     [{ title: "✏️ Edit Bonus", command: "/edit-bonus" }],
     [{ title: "✏️Edit Refer Bonus", command: "/edit-refer" }],
