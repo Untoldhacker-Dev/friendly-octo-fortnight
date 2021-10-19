@@ -9,7 +9,6 @@
   aliases: 
 CMD*/
 
-if(!isAdmin()){return}
 Bot.setProperty("cur", message)
 Bot.sendMessage("*The Bot's Currency is set To: " + message + "*")
 
