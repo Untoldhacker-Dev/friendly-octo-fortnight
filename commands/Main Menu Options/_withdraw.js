@@ -10,10 +10,8 @@
 CMD*/
 
 var min = Bot.getProperty("min")
-var currency = Bot.getProperty("cur")
-let balance = Libs.ResourcesLib.userRes("balance")
-var wallet = User.getProperty("wallet")
-if (wallet == undefined) {
+
+if (!wallet) {
   Bot.sendMessage("_❌ Wallet Not set_")
 return
 } else 
