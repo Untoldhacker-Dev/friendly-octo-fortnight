@@ -10,16 +10,12 @@
 CMD*/
 
 var min = Bot.getProperty("min")
-//var chann = Bot.getProperty("chann")
-var chann = "@YourChannelUsername"
-var currency = Bot.getProperty("cur")
+var channel = "@YourChannelUsername"
 var user_link = Libs.commonLib.getLinkFor(user)
 var lib = Libs.ReferralLib
 var refList = lib.currentUser.refList.get()
-var wallet = User.getProperty("wallet")
 var userPayment = Libs.ResourcesLib.anotherChatRes("totalPayment", "global")
 userPayment.add(+message)
-var balance = Libs.ResourcesLib.userRes("balance")
 if (isNaN(message)) {
 } else {
 }
@@ -50,7 +46,7 @@ if (message < min) {
     )
   balance.add(-message)
   Api.sendMessage({
-    chat_id: chann,
+    chat_id: channel,
     text:
       "*🔋 New Withdraw Request 🏦\n\n▪️ Status = Pending\n▪️ User =* " +
       user_link +
