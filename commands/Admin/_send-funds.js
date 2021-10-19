@@ -9,7 +9,6 @@
   aliases: 
 CMD*/
 
-if(!isAdmin()){return}
 var msg = message
 var options = {tgid: message}
 User.setProperty("id", msg)
