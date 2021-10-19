@@ -13,4 +13,3 @@ var msg = message
 var options = {tgid: message}
 User.setProperty("id", msg)
 Bot.run({command:"onGetIdToSend",options})
-

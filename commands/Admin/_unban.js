@@ -9,7 +9,7 @@
   aliases: 
 CMD*/
 
-  if (user.telegramid == message) {
+if (user.telegramid == message) {
     Bot.sendMessage("Error: 404, User is not found!")
     return
   } else Bot.unblockChat(message)
@@ -23,4 +23,3 @@ CMD*/
       message +
       ")"
   )
-

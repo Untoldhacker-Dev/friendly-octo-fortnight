@@ -11,4 +11,3 @@ CMD*/
 
 User.setProperty("wallet", message, "string")
 Bot.sendMessage("*✏️☑️ Wallet set To :* " + message + "")
-

@@ -9,27 +9,31 @@
   aliases: 💲withdraw
 CMD*/
 
-var min = Bot.getProperty("min")
+var minimum_withdraw = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "minimum_withdraw" // field name
+})
 
 if (!wallet) {
   Bot.sendMessage("_❌ Wallet Not set_")
-return
-} else 
-if (!min) {
-  Bot.sendMessage("*Oops! minimum withdraw is Unavailable. As it is not set by Admin.*")
+  return
+} else if (!minimum_withdraw) {
+  Bot.sendMessage(
+    "*Oops! minimum withdraw is Unavailable. As it is not set by Admin.*"
+  )
   return
 }
-  if (balance.value() < min) {
-    Bot.sendMessage(
-      "_❌ To Withdraw, You have to own at least " +
-        min +
-        " " +
-        currency +
-        " in Balance !_"
-    )
-  } else {
-    Bot.sendMessage("*📤 Enter Amount*")
-    Bot.runCommand("onVerifiedBalance")
-  }
-
+if (balance.value() < minimum_withdraw) {
+  Bot.sendMessage(
+    "_❌ To Withdraw, You have to own at least " +
+      minimum_withdraw +
+      " " +
+      currency +
+      " in Balance !_"
+  )
+} else {
+  Bot.sendMessage("*📤 Enter Amount*")
+  var options = {authorised:true} //We need this just to make sure the sequence /withdraw > onVerifiedBalance
+  Bot.run(command: "onVerifiedBalance",options)
+}
 

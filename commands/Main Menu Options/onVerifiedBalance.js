@@ -9,8 +9,25 @@
   aliases: 
 CMD*/
 
-var min = Bot.getProperty("min")
-var channel = "@YourChannelUsername"
+var minimum_withdraw = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "minimum_withdraw" // field name
+})
+
+var channel = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "withdraw_channel" // field name
+})
+if (!options.authorised) {
+  return
+}
+if (!channel.includes("@")) {
+  Bot.sendMessage(
+    "*Seems You have incorrect Information set In App's Admin panel!*"
+  )
+  Bot.runCommand("/setup")
+  return
+}
 var user_link = Libs.commonLib.getLinkFor(user)
 var lib = Libs.ReferralLib
 var refList = lib.currentUser.refList.get()
@@ -19,8 +36,10 @@ userPayment.add(+message)
 if (isNaN(message)) {
 } else {
 }
-if (message < min) {
-  Bot.sendMessage("_❌ Minimum Withdraw " + min + " " + currency + "_")
+if (message < minimum_withdraw) {
+  Bot.sendMessage(
+    "_❌ Minimum Withdraw " + minimum_withdraw + " " + currency + "_"
+  )
   return
 } else {
   if (message > balance.value()) {
@@ -38,10 +57,10 @@ if (message < min) {
         message +
         " " +
         currency +
-        "\n💼 Wallet = " +
+        "\n💼 Wallet: " +
         wallet +
         "\n\n⏰Wait 2 Mins We Will Check And Pay You🎧 \n\n✅ Important❗**\n_If You Do Fake Refer You Will Banned\n\n🌹 Payment Channel : " +
-        chann +
+        channel +
         "*"
     )
   balance.add(-message)
@@ -50,17 +69,17 @@ if (message < min) {
     text:
       "*🔋 New Withdraw Request 🏦\n\n▪️ Status = Pending\n▪️ User =* " +
       user_link +
-      "*\n▪️ User ID = " +
+      "*\n▪️ User ID: " +
       user.telegramid +
-      "\n▪️ Amount = " +
+      "\n▪️ Amount: " +
       message +
       " " +
       currency +
-      "\n▪️ User Referrals = " +
+      "\n▪️ User Referrals: " +
       refList.length +
-      "\n\n💳 Wallet =\n " +
+      "\n\n💳 Wallet: \n " +
       wallet +
-      "\n\n👮🏻‍♂ Bot = @" +
+      "\n\n👮🏻‍♂ Bot : @" +
       bot.name +
       "*",
     parse_mode: "Markdown"
