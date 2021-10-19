@@ -9,7 +9,6 @@
   aliases: 
 CMD*/
 
-if(!isAdmin()){return}
 let value = message
 let tgid = User.getProperty("id")
 let res = Libs.ResourcesLib.anotherUserRes("balance", tgid)
