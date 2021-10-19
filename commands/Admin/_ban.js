@@ -8,8 +8,6 @@
   keyboard: 
   aliases: 
 CMD*/
-
-if(!isAdmin()){return}
 if (user.telegramid == message) {
   Bot.sendMessage("Error: 404, User is not found!")
   return
