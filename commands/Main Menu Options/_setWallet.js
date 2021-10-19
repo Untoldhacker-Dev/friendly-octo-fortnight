@@ -9,7 +9,6 @@
   aliases: ⚙️set wallet
 CMD*/
 
-let wallet = User.getProperty("wallet")
 User.setProperty("wallet", message, "string")
 Bot.sendMessage("*✏️☑️ Wallet set To :* " + message + "")
 
