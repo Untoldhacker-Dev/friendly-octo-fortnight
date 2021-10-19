@@ -10,12 +10,10 @@
 CMD*/
 
 var balance = Libs.ResourcesLib.userRes("balance")
-var lib = Libs.ReferralLib
-var currency = Bot.getProperty("cur")
 Bot.sendMessage(
-  "*✏️ User : " +
-    user.first_name +
-    "\n\n💰 Balance : " +
+  "*✏️ User : *" +
+     Libs.commonLib.getLinkFor(user)+
+    "*\n\n💰 Balance : " +
     balance.value() +
     " " +
     currency +
