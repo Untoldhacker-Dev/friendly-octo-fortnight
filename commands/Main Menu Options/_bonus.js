@@ -42,9 +42,15 @@ if (!canRun()) {
   return
 }
 User.setProperty("last_run_atr", Date.now(), "integer")
-var bonus = Bot.getProperty("bonus")
+var bonus = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "bonus" // field name
+})
+
 if (!bonus) {
-  Bot.sendMessage("*Oops! Daily Bonus is Unavailable. As it is not set by Admin.*")
+  Bot.sendMessage(
+    "*Oops! Daily Bonus is Unavailable. As it is not set by Admin.*"
+  )
   return
 }
 balance.add(+bonus)

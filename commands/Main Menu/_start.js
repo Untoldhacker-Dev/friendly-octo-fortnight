@@ -9,15 +9,18 @@
   aliases: 
 CMD*/
 
-var msg = Bot.getProperty("welcome")
-var admin_chat = Bot.getProperty("admin_chat")
-var bonus = Bot.getProperty("comm")
-var currency = Bot.getProperty("cur")
-if (!admin_chat) {
-  Bot.setProperty("admin_chat", user.telegramid)
-  Bot.sendMessage(
-    "You're the admin now, Use command /panel to open admin panel"
-  )
+var admin = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "ADMIN_ID" // field name
+})
+
+var bonus = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "refer_commision" // field name
+})
+if (!admin) {
+  Bot.sendMessage("Please /setup the bot first.")
+  Bot.runCommand("/setup")
 }
 if (!bonus) {
   Bot.sendMessage(
@@ -61,10 +64,10 @@ var trackOptions = {
 
 Libs.ReferralLib.currentUser.track(trackOptions)
 var new_user = Bot.getProperty("new_user")
-if(new_user){
-var status = Libs.ResourcesLib.anotherChatRes("status", "global")
-status.add(+1)
-Bot.setProperty("new_user", false)
+if (new_user) {
+  var status = Libs.ResourcesLib.anotherChatRes("status", "global")
+  status.add(+1)
+  Bot.setProperty("new_user", false)
 }
 Bot.sendKeyboard(
   "💰 Balance,⚙️Set wallet\n👫 Referral,💲Withdraw\n🎁 Daily Bonus,⛽ Stats",

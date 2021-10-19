@@ -9,17 +9,15 @@
   aliases: 
 CMD*/
 
-  var keyboard = [
-    [{ title: "✏️ Edit Bonus", command: "/edit-bonus" }],
-    [{ title: "✏️Edit Refer Bonus", command: "/edit-refer" }],
-    [{ title: "✏️ Edit Minimum Withdraw", command: "/edit-Min.Withdraw" }],
-    [{ title: "✏️ Edit Currency", command: "/edit-currency" }],
-    [
-      { title: "⚠️ Ban", command: "/ban" },
-      { title: "⚠️ Unban", command: "/unban" }
-    ],
-    [{ title: "Add/Remove Funds", command:"/send-funds"}]
-  ]
-  Bot.sendInlineKeyboard(keyboard, "*Welcome. Admin!*")
-}
+var keyboard = [
+  [
+    { title: "⚠️ Ban", command: "/ban" },
+    { title: "⚠️ Unban", command: "/unban" }
+  ],
+  [{ title: "Add/Remove Funds", command: "/send-funds" }]
+]
+Bot.sendInlineKeyboard(
+  keyboard,
+  "*Welcome. Admin!\nYou can run /setup to edit other values such as: Minimum Withdrawal, Refer commission, Daily bonus amount, Currency Name.*"
+)
 
