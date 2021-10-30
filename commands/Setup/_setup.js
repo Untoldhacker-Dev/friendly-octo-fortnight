@@ -15,7 +15,7 @@ var panel = {
   description: "Please fill here your admin-related information",
   // order index
   index: 0,
-  icon: "key",
+  icon: "lock",
   // save button title - default "SAVE"
   button_title: "SAVE",
   // command called on saving

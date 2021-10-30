@@ -3,7 +3,7 @@
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: Main Menu Options
+  folder: Withdraw
   answer: 
   keyboard: 
   aliases: 💲withdraw
@@ -34,6 +34,6 @@ if (balance.value() < minimum_withdraw) {
 } else {
   Bot.sendMessage("*📤 Enter Amount*")
   var options = {authorised:true} //We need this just to make sure the sequence /withdraw > onVerifiedBalance
-  Bot.run(command: "onVerifiedBalance",options)
+  Bot.run({command: "onVerifiedBalance",options})
 }
 

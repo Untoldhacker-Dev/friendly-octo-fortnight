@@ -1,15 +1,15 @@
 /*CMD
   command: /send-funds
   help: 
-  need_reply: true
+  need_reply: false
   auto_retry_time: 
   folder: Admin
-  answer: *Enter user's Telegram id to send funds to?*
+
+  <<ANSWER
+
+  ANSWER
   keyboard: 
   aliases: 
 CMD*/
 
-var msg = message
-var options = {tgid: message}
-User.setProperty("id", msg)
-Bot.run({command:"onGetIdToSend",options})
+Bot.run({command:"send-funds-answer"})
