@@ -3,7 +3,7 @@
   help: 
   need_reply: true
   auto_retry_time: 
-  folder: Main Menu Options
+  folder: Set Wallet
   answer: *Please Enter Your Wallet Address.*
   keyboard: 
   aliases: ⚙️set wallet

@@ -3,7 +3,7 @@
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: Main Menu Options
+  folder: Bonus
   answer: 
   keyboard: 
   aliases: 🎁 daily bonus
@@ -53,6 +53,6 @@ if (!bonus) {
   )
   return
 }
-balance.add(+bonus)
+balance.add(+parseFloat(bonus))
 Bot.sendMessage("*🎁 Congrats , You Received +" + bonus + " " + currency + "!*")
 

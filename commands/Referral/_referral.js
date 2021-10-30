@@ -3,7 +3,7 @@
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: Main Menu Options
+  folder: Referral
   answer: 
   keyboard: 
   aliases: 👫 referral
