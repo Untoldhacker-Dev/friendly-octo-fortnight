@@ -21,7 +21,7 @@ var channel = AdminPanel.getFieldValue({
 if (!options.authorised) {
   return
 }
-if (!channel.includes("@")) {
+if (!channel || !channel.startsWith("@")) {
   Bot.sendMessage(
     "*Seems You have incorrect Information set In App's Admin panel!*"
   )
@@ -32,7 +32,6 @@ var user_link = Libs.commonLib.getLinkFor(user)
 var lib = Libs.ReferralLib
 var refList = lib.currentUser.refList.get()
 var userPayment = Libs.ResourcesLib.anotherChatRes("totalPayment", "global")
-userPayment.add(+message)
 if (isNaN(message)) {
 } else {
 }
@@ -45,7 +44,7 @@ if (message < minimum_withdraw) {
   if (message > balance.value()) {
     Bot.sendMessage(
       "_❌ Maximum Withdraw " +
-        balance.value().toFixed(6) +
+        balance.value() +
         " " +
         currency +
         "_"
@@ -53,13 +52,13 @@ if (message < minimum_withdraw) {
     return
   } else
     Bot.sendMessage(
-      "*✅ Withdrawal Sent Successfully\nIt takes some transaction fee\n\n💳 Transaction Details = \n 💰Amount = " +
+      "*✅ Withdrawal Sent Successfully\nIt takes some transaction fee\n\n💳 Transaction Details:- \n 💰Amount: " +
         message +
         " " +
         currency +
         "\n💼 Wallet: " +
         wallet +
-        "\n\n⏰Wait 2 Mins We Will Check And Pay You🎧 \n\n✅ Important❗**\n_If You Do Fake Refer You Will Banned\n\n🌹 Payment Channel : " +
+        "\n\n⏰Wait few hoursWe Will Check And Pay You \n\n✅ NOTE:❗**\nIf You Do Fake Refer You Will Banned\n\n🌹 Payment Channel : " +
         channel +
         "*"
     )
@@ -67,7 +66,7 @@ if (message < minimum_withdraw) {
   Api.sendMessage({
     chat_id: channel,
     text:
-      "*🔋 New Withdraw Request 🏦\n\n▪️ Status = Pending\n▪️ User =* " +
+      "*🔋 New Withdraw Request 🏦\n\n▪️ Status: Pending\n▪️ User:* " +
       user_link +
       "*\n▪️ User ID: " +
       user.telegramid +
@@ -84,5 +83,6 @@ if (message < minimum_withdraw) {
       "*",
     parse_mode: "Markdown"
   })
+userPayment.add(+message)
 }
 

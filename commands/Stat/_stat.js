@@ -11,4 +11,13 @@ CMD*/
 
 var status = Libs.ResourcesLib.anotherChatRes("status", "global")
 var track = Libs.ResourcesLib.anotherChatRes("totalPayment", "global")
-Bot.sendMessage("*👥Total Users: "+status.value()+"\n🏦Total Withdrawals: "+track.value()+" <cur> *")
+Bot.sendMessage(
+  "*👥Total Users: " +
+    status.value() +
+    "\n🏦Total Withdrawals: " +
+    track.value() +
+    " " +
+    currency +
+    "*"
+)
+

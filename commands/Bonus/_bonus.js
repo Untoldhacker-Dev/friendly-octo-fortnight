@@ -9,39 +9,41 @@
   aliases: 🎁 daily bonus
 CMD*/
 
-function canRun() {
-  var last_run_at = User.getProperty("last_run_atr")
-  if (!last_run_at) {
-    return true
-  }
+let bonusCooldown = Libs.ResourcesLib.userRes("bonusCooldown")
 
-  var minutes = (Date.now() - last_run_at) / 1000 / 60
+// cooldown conversion in seconds
+var bonus_cooldown = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "bonus_cooldown" // field name
+})
+let totalCooldown = 60 * 60 * Math.round(bonus_cooldown) // 60*60*24 seconds = 24 hours
 
-  var minutes_in_day = 24 * 60
-  var next = minutes_in_day - minutes
-  var wait_hours = Math.floor(next / 60)
-  next -= wait_hours * 60
-  var wait_minutes = Math.floor(next)
-  var seconds = Math.floor((next - wait_minutes) * 60)
-  if (minutes < minutes_in_day) {
-    Bot.sendMessage(
-      "*📛 You have already received a bonus Today\n\n▶️ Come Back After ⏳ " +
-        wait_hours +
-        " h " +
-        wait_minutes +
-        " m " +
-        seconds +
-        " s*"
-    )
+function resetCooldown() {
+  bonusCooldown.set(totalCooldown)
+}
+
+function setupCooldown() {
+  if (bonusCooldown.growth.isEnabled()) {
+    // already setupped
     return
   }
-  return true
+
+  bonusCooldown.growth.add({
+    value: -1, // just add negative value
+    interval: 1, // -1 once at 1 sec
+    min: 0
+  })
 }
 
-if (!canRun()) {
+setupCooldown()
+
+if (bonusCooldown.value() > 0) {
+  Bot.sendMessage("Please wait: " + bonusCooldown.value() + " seconds.")
   return
 }
-User.setProperty("last_run_atr", Date.now(), "integer")
+
+// can give bonus now
+resetCooldown() // need to reset cooldown
 var bonus = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "bonus" // field name
@@ -55,4 +57,6 @@ if (!bonus) {
 }
 balance.add(+parseFloat(bonus))
 Bot.sendMessage("*🎁 Congrats , You Received +" + bonus + " " + currency + "!*")
+// your other code here
+//..
 

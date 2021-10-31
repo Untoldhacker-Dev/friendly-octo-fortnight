@@ -69,6 +69,16 @@ var panel = {
       // hidden: true  // if you need hidden field. By default - false
     },
     {
+      name: "bonus_cooldown",
+      title: "Daily Bonus Time",
+      description:
+        "Set your Daily bonus Time in hours, users will wait for next x hours after receiving a bonus already, ",
+      type: "integer",
+      placeholder: "Bonus Time Limit: Hours",
+      value: 24 // default value
+      // hidden: true  // if you need hidden field. By default - false
+    },
+    {
       name: "refer_commision",
       title: "Referral Bonus",
       description: "Set your Referral Bonus here",
