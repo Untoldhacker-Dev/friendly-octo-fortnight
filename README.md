@@ -134,7 +134,8 @@ See [API](https://api.bots.business/docs#/docs/summary)
 
 ### Function: 
 
-#### Edit Bonus- Change Daily bonus amount
+#### Edit Bonus- Change Daily bonus amount 
+#### Edit Bonus cooldown - Daily limit editing for Bonus
 #### Edit Minimum Withdraw - Change minimum withdrawal amount 
 #### Edit Refer Commission - Change refer bonus amount
 #### Edit Currency - Change bot's Currency
@@ -143,5 +144,5 @@ See [API](https://api.bots.business/docs#/docs/summary)
 #### Add / Remove funds - Send funds or Remove funds from an user's balance by it's telegram id.
 
 ## How to Login to Admin panel?
-#### The first one to start the bot will be it's admin (You can remove admin_chat property to reset admin to null); After starting the bot (At first) the bot will inform your with further instructions to login admin panel.
-![Admin Panel](https://github.com/Untoldhacker-Dev/pictoQue/blob/main/Screenshot_2021-10-16-07-56-53-706.jpeg)
+#### The first step is: run /setup, an in app admin panel will appear in the app's admin panel section, edit it as your will, then after filing it completely, run /panel to see your Inline Admin panel which consists: Ban, Unban, Send/Remove funds.
+![Admin Panel](https://github.com/Untoldhacker-Dev/pictoQue/blob/main/Screenshot_2021-10-31-10-21-52-913.jpeg)
