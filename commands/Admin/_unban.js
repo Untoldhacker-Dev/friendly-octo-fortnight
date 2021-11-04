@@ -14,12 +14,5 @@ if (user.telegramid == message) {
     return
   } else Bot.unblockChat(message)
   Bot.sendMessage(
-    "Successfully unbanned: " +
-      "[" +
-      "User" +
-      "]" +
-      "(" +
-      "tg://user?id=" +
-      message +
-      ")"
+    "Successfully unbanned: " + user_url
   )
