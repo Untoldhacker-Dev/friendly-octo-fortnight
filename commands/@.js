@@ -8,7 +8,7 @@
   keyboard: 
   aliases: 
 CMD*/
-
+var user_url = Libs.commonLib.getLinkFor(user)
 var currency = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "currency" // field name
