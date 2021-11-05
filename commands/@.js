@@ -8,19 +8,36 @@
   keyboard: 
   aliases: 
 CMD*/
-var user_link = Libs.commonLib.getLinkFor(user)
+
 var currency = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "currency" // field name
 })
+/*
+Need define 'balance' for functions
+*/
 var balance = Libs.ResourcesLib.userRes("balance")
-var wallet = User.getProperty("wallet")
+function readUserData() {
+  if (!user) {
+    return
+  }
+  user.link = Libs.commonLib.getLinkFor(user)
+  user.balance = Libs.ResourcesLib.userRes("balance").value()
+  user.wallet = User.getProperty("wallet")
+}
+readUserData()
 var Admin = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "ADMIN_ID" // field name
 })
-if (command.folder == "Admin" && user.telegramid != Admin) {
-  return
+var isAdmin = user && user.telegramid == Admin
+if (command.folder == "Admin Panel" && isAdmin) {
+  // only admin can run command from Admin Panel's folder
+  // any common bjs here for admin
+  Bot.sendMessage("Hello, admin!")
+} else {
+  Bot.sendMessage("Access denied")
+  return // exit from command now
 }
 
 function isNumeric(n) {

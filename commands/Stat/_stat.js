@@ -9,15 +9,15 @@
   aliases: ⛽ stats
 CMD*/
 
-var status = Libs.ResourcesLib.anotherChatRes("status", "global")
-var track = Libs.ResourcesLib.anotherChatRes("totalPayment", "global")
+var totalUsers = Libs.ResourcesLib.anotherChatRes("status", "global").value()
+var totalPayment = Libs.ResourcesLib.anotherChatRes("totalPayment", "global").value()
 Bot.sendMessage(
   "*👥Total Users: " +
-    status.value() +
+    totalUsers +
     "\n🏦Total Withdrawals: " +
-    track.value() +
+    totalPayment +
     " " +
     currency +
     "*"
 )
-
+  

@@ -3,12 +3,17 @@
   help: 
   need_reply: 
   auto_retry_time: 
-  folder: Setup
+  folder: Admin
   answer: 
   keyboard: 
   aliases: 
 CMD*/
 
+var isInstalled = AdminPanel.getPanel("Admin Information").fields[0]
+if (isInstalled) {
+  // you need to remove this if you want run setup again
+  return
+}
 var panel = {
   // Panel title
   title: "Admin Information",
