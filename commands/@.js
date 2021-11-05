@@ -30,16 +30,9 @@ var Admin = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "ADMIN_ID" // field name
 })
-var isAdmin = user && user.telegramid == Admin
-if (command.folder == "Admin Panel" && isAdmin) {
-  // only admin can run command from Admin Panel's folder
-  // any common bjs here for admin
-  Bot.sendMessage("Hello, admin!")
-} else {
-  Bot.sendMessage("Access denied")
-  return // exit from command now
+if (command.folder == "Admin Panel" && user.telegramid != Admin) {
+  return //deny access
 }
-
 function isNumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n)
 }
