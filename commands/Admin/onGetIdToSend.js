@@ -15,17 +15,16 @@ _Tip: You can add minus sign before the number to deduct the amount from user's 
 CMD*/
 
 let amount = parseFloat(message)
-let value = message
-let tgid = User.getProperty("id")
+let tgid = options.tgid
 let res = Libs.ResourcesLib.anotherUserRes("balance", tgid)
 
-if (!isNumeric(value)) {
+if (!isNumeric(message)) {
   Bot.sendMessage("*📛 Invaild value. Enter only numeric value. Try again*", {
     is_reply: true
   })
 
   return
-} else res.add(parseFloat(amount))
+} else res.add(+amount)
 Bot.sendMessage(
   "*The amount " +
     amount +

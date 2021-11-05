@@ -14,7 +14,7 @@ var minimum_withdraw = AdminPanel.getFieldValue({
   field_name: "minimum_withdraw" // field name
 })
 
-if (!wallet) {
+if (!user.wallet) {
   Bot.sendMessage("_❌ Wallet Not set_")
   return
 } else if (!minimum_withdraw) {
@@ -23,7 +23,7 @@ if (!wallet) {
   )
   return
 }
-if (balance.value() < minimum_withdraw) {
+if (user.balance < minimum_withdraw) {
   Bot.sendMessage(
     "_❌ To Withdraw, You have to own at least " +
       minimum_withdraw +
@@ -33,7 +33,7 @@ if (balance.value() < minimum_withdraw) {
   )
 } else {
   Bot.sendMessage("*📤 Enter Amount*")
-  var options = {authorised:true} //We need this just to make sure the sequence /withdraw > onVerifiedBalance
-  Bot.run({command: "onVerifiedBalance",options})
+  var options = { minimum_withdraw: 1 } //We need this just to make sure the sequence /withdraw > onVerifiedBalance
+  Bot.run({ command: "withdrawRequest", options })
 }
 

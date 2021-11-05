@@ -9,12 +9,14 @@
   aliases: 💰 balance
 CMD*/
 
+
 Bot.sendMessage(
   "*✏️ User : *" +
-     Libs.commonLib.getLinkFor(user)+
+     user.link+
     "*\n\n💰 Balance : " +
-    balance.value() +
+    user.balance +
     " " +
     currency +
     "\n\n⚜️Refer And Earn More*"
 )
+

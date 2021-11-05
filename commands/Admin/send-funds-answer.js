@@ -6,10 +6,9 @@
   folder: Admin
   answer: *Enter user's Telegram id to send funds to?*
   keyboard: 
-  aliases: 
+  aliases: /send-funds
 CMD*/
 
 var msg = message
 var options = {tgid: message}
-User.setProperty("id", msg)
 Bot.run({command:"onGetIdToSend",options})

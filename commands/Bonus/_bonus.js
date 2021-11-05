@@ -10,6 +10,7 @@
 CMD*/
 
 let bonusCooldown = Libs.ResourcesLib.userRes("bonusCooldown")
+var seconds = bonusCooldown.value()
 
 // cooldown conversion in seconds
 var bonus_cooldown = AdminPanel.getFieldValue({
@@ -38,7 +39,7 @@ function setupCooldown() {
 setupCooldown()
 
 if (bonusCooldown.value() > 0) {
-  Bot.sendMessage("Please wait: " + bonusCooldown.value() + " seconds.")
+  Bot.sendMessage("Please wait: " + seconds + " seconds.")
   return
 }
 
