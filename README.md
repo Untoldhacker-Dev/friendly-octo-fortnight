@@ -162,4 +162,4 @@ See [API](https://api.bots.business/docs#/docs/summary)
 
 ## How to Login to Admin panel?
 #### The first one to start the bot will be it's admin (You can remove admin_chat property to reset admin to null); After starting the bot (At first) the bot will inform your with further instructions to login admin panel.
-![Admin Panel](https://github.com/Untoldhacker-Dev/pictoQue/blob/main/Screenshot_2021-10-16-07-56-53-706.jpeg)
+![Admin Panel](https://github.com/Untoldhacker-Dev/pictoQue/blob/main/Screenshot_2021-11-06-14-40-34-952.jpeg)
