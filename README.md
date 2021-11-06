@@ -158,8 +158,5 @@ See [API](https://api.bots.business/docs#/docs/summary)
 
 ## How to Login to Admin panel?
 
-#### run /setup, an In-App Admin panel will open, set all the values, also /panel is available then.dd / Remove funds - Send funds or Remove funds from an user's balance by it's telegram id.
-
-## How to Login to Admin panel?
-#### The first one to start the bot will be it's admin (You can remove admin_chat property to reset admin to null); After starting the bot (At first) the bot will inform your with further instructions to login admin panel.
+#### run /setup, an In-App Admin panel will open, set all the values, also /panel is available then
 ![Admin Panel](https://github.com/Untoldhacker-Dev/pictoQue/blob/main/Screenshot_2021-11-06-14-40-34-952.jpeg)
