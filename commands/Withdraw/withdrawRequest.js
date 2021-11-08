@@ -11,12 +11,12 @@ CMD*/
 
 function needMoreAmount() {
   Bot.sendMessage(
-    "_❌ Minimum Withdraw " + minimum_withdraw + " " + currency + "_"
+    "_❌ Minimum Withdraw " + minimum_withdraw + " " + bot.currency + "_"
   )
   return
 }
 function needLessAmount() {
-  Bot.sendMessage(`❌ Maximum Withdraw ${user.balance} ${currency} `)
+  Bot.sendMessage(`❌ Maximum Withdraw ${user.balance} ${bot.currency} `)
   return
 }
 function isInvalid() {
@@ -25,12 +25,12 @@ function isInvalid() {
 }
 function sendWithdrawRequest() {
   Bot.sendMessage(
-    ` ✅ Withdrawal Sent Successfully\nIt takes some transaction fee\n\n💳 Transaction Details:- \n 💰Amount: ${message} ${currency} \n💼 Wallet:  ${user.wallet} \n\n⏰Wait few hours We Will Check And Pay You \n\n✅ NOTE:❗**\nIf You Do Fake Refer You Will Banned\n\n🌹 Payment Channel : ${channel} `
+    ` ✅ Withdrawal Sent Successfully\nIt takes some transaction fee\n\n💳 Transaction Details:- \n 💰Amount: ${message} ${bot.currency} \n💼 Wallet:  ${user.wallet} \n\n⏰Wait few hours We Will Check And Pay You \n\n✅ NOTE:❗**\nIf You Do Fake Refer You Will Banned\n\n🌹 Payment Channel : ${channel} `
   )
   balance.add(-message)
   Api.sendMessage({
     chat_id: channel,
-    text: `🔋 New Withdraw Request 🏦\n\n▪️ Status: Pending\n▪️ User: ${user.link} \n▪️ User ID:  ${user.telegramid} \n▪️ Amount: ${message} ${currency} \n▪️ User Referrals: ${refList.length} \n\n💳 Wallet: \n ${user.wallet} \n\n👮🏻‍♂ Bot : @${bot.name}`,
+    text: `🔋 New Withdraw Request 🏦\n\n▪️ Status: Pending\n▪️ User: ${user.link} \n▪️ User ID:  ${user.telegramid} \n▪️ Amount: ${message} ${bot.currency} \n▪️ User Referrals: ${refList.length} \n\n💳 Wallet: \n ${user.wallet} \n\n👮🏻‍♂ Bot : @${bot.name}`,
     parse_mode: "Markdown"
   })
   userPayment.add(+message)
@@ -40,11 +40,12 @@ var minimum_withdraw = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "minimum_withdraw" // field name
 })
-
 var channel = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "withdraw_channel" // field name
 })
+
+
 if (!options.minimum_withdraw) {
   return
 }
