@@ -25,13 +25,14 @@ function readUserData() {
   user.link = Libs.commonLib.getLinkFor(user)
   user.balance = Libs.ResourcesLib.userRes("balance").value()
   user.wallet = User.getProperty("wallet")
-}
-readUserData()
-var Admin = AdminPanel.getFieldValue({
+  bot.adminID = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "ADMIN_ID" // field name
 })
-if (command.folder == "Admin Panel" && user.telegramid != Admin) {
+}
+
+readUserData()
+if (command.folder == "Admin Panel" && user.telegramid != bot.adminID) {
   return //deny access
 }
 function isNumeric(n) {
