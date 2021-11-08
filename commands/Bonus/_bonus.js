@@ -24,7 +24,7 @@ function onEnding(time) {
         return
     }
     balance.add(+parseFloat(bonus))
-    Bot.sendMessage("*🎁 Congrats , You Received +" + bonus + " " + currency + "!*")
+    Bot.sendMessage("*🎁 Congrats , You Received +" + bonus + " " + bot.currency + "!*")
     // your other code here
     //..
 
