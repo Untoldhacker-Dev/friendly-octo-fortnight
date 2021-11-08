@@ -16,7 +16,7 @@ Bot.sendMessage(
     "*\n\n💰 Balance : " +
     user.balance +
     " " +
-    currency +
+    bot.currency +
     "\n\n⚜️Refer And Earn More*"
 )
 
