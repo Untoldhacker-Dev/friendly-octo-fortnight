@@ -47,7 +47,7 @@ function doAtractedByUser(refUser) {
   balance.add(+bonus)
   Bot.sendMessageToChatWithId(
     refUser.chatId,
-    "*🏧 New Referral You Got: <comm> <cur>*"
+    "*🏧 New Referral You Got: *"+bonus+" "+bot.currency
   )
 }
 
@@ -65,7 +65,7 @@ var trackOptions = {
 Libs.ReferralLib.currentUser.track(trackOptions)
 var new_user = Bot.getProperty("new_user")
 if (new_user) {
-  var status = Libs.ResourcesLib.anotherChatRes("status", "global")
+  var status = Libs.ResourcesLib.anotherChatRes("totalUsers", "global")
   status.add(+1)
   Bot.setProperty("new_user", false)
 }
