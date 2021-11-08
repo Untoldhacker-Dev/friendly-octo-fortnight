@@ -9,7 +9,7 @@
   aliases: ⛽ stats
 CMD*/
 
-var totalUsers = Libs.ResourcesLib.anotherChatRes("status", "global").value()
+var totalUsers = Libs.ResourcesLib.anotherChatRes("totalUsers", "global").value()
 var totalPayment = Libs.ResourcesLib.anotherChatRes("totalPayment", "global").value()
 Bot.sendMessage(
   "*👥Total Users: " +
