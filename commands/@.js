@@ -21,6 +21,7 @@ function readUserData() {
   if (!user) {
     return
   }
+  bot.currency = currency
   user.link = Libs.commonLib.getLinkFor(user)
   user.balance = Libs.ResourcesLib.userRes("balance").value()
   user.wallet = User.getProperty("wallet")
