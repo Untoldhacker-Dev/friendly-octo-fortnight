@@ -17,7 +17,7 @@ Bot.sendMessage(
     "\n🏦Total Withdrawals: " +
     totalPayment +
     " " +
-    currency +
+    bot.currency +
     "*"
 )
   
