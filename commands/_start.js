@@ -9,16 +9,11 @@
   aliases: 
 CMD*/
 
-var admin = AdminPanel.getFieldValue({
-  panel_name: "AdminInfo", // panel name
-  field_name: "ADMIN_ID" // field name
-})
-
 var bonus = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "refer_commision" // field name
 })
-if (!admin) {
+if (!bot.adminID) {
   Bot.sendMessage("Please /setup the bot first.")
   Bot.runCommand("/setup")
 }
@@ -63,11 +58,11 @@ var trackOptions = {
 }
 
 Libs.ReferralLib.currentUser.track(trackOptions)
-var new_user = Bot.getProperty("new_user")
-if (new_user) {
+var old_user = Bot.getProperty("old_user")
+if (!old_user) {
   var status = Libs.ResourcesLib.anotherChatRes("totalUsers", "global")
   status.add(+1)
-  Bot.setProperty("new_user", false)
+  Bot.setProperty("old_user", true)
 }
 Bot.sendKeyboard(
   "💰 Balance,⚙️Set wallet\n👫 Referral,💲Withdraw\n🎁 Daily Bonus,⛽ Stats",
