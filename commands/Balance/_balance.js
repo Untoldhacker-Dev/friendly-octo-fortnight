@@ -9,14 +9,13 @@
   aliases: 💰 balance
 CMD*/
 
-
 Bot.sendMessage(
   "*✏️ User : *" +
-     user.link+
+    user.link +
     "*\n\n💰 Balance : " +
     user.balance +
     " " +
-    bot.currency +
+    currency +
     "\n\n⚜️Refer And Earn More*"
 )
 

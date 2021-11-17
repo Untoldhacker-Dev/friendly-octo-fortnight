@@ -24,7 +24,8 @@ if (!isNumeric(message)) {
   })
 
   return
-} else res.add(+amount)
+}
+res.add(amount)
 Bot.sendMessage(
   "*The amount " +
     amount +
@@ -36,3 +37,4 @@ Bot.sendMessageToChatWithId(
   tgid,
   "*🎁 You have just received +" + amount + " from admin.*"
 )
+

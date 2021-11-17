@@ -10,5 +10,5 @@
 CMD*/
 
 User.setProperty("wallet", message, "string")
-Bot.sendMessage("*✏️☑️ Wallet set To :* " + user.wallet + "")
+Bot.sendMessage("*✏️☑️ Wallet set To :* " + message + "")
 

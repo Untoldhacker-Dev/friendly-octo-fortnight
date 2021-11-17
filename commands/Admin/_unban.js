@@ -10,9 +10,9 @@
 CMD*/
 
 if (user.telegramid == message) {
-    Bot.sendMessage("Error: 404, User is not found!")
-    return
-  } else Bot.unblockChat(message)
-  Bot.sendMessage(
-    "Successfully unbanned: "+ message
-  )
+  Bot.sendMessage("Error: 404, User is not found!")
+  return
+}
+Bot.unblockChat(message)
+Bot.sendMessage("Successfully unbanned: " + message)
+

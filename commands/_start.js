@@ -9,11 +9,16 @@
   aliases: 
 CMD*/
 
+var admin = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "ADMIN_ID" // field name
+})
+
 var bonus = AdminPanel.getFieldValue({
   panel_name: "AdminInfo", // panel name
   field_name: "refer_commision" // field name
 })
-if (!bot.adminID) {
+if (!admin) {
   Bot.sendMessage("Please /setup the bot first.")
   Bot.runCommand("/setup")
 }
@@ -39,10 +44,10 @@ function doAttracted(channel) {
 function doAtractedByUser(refUser) {
   hello("")
   var balance = Libs.ResourcesLib.anotherUserRes("balance", refUser.telegramid)
-  balance.add(+bonus)
+  balance.add(+bonus) //Upperline Add
   Bot.sendMessageToChatWithId(
     refUser.chatId,
-    "*🏧 New Referral You Got: *"+bonus+" "+bot.currency
+    "*🏧 New Referral You Got: <comm> <cur>*"
   )
 }
 
@@ -58,11 +63,11 @@ var trackOptions = {
 }
 
 Libs.ReferralLib.currentUser.track(trackOptions)
-var old_user = Bot.getProperty("old_user")
-if (!old_user) {
-  var status = Libs.ResourcesLib.anotherChatRes("totalUsers", "global")
-  status.add(+1)
-  Bot.setProperty("old_user", true)
+var new_user = Bot.getProperty("new_user")
+if (new_user) {
+  var status = Libs.ResourcesLib.anotherChatRes("status", "global")
+  status.add(1)
+  Bot.setProperty("new_user", false)
 }
 Bot.sendKeyboard(
   "💰 Balance,⚙️Set wallet\n👫 Referral,💲Withdraw\n🎁 Daily Bonus,⛽ Stats",

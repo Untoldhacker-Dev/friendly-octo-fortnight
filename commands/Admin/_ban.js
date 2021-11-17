@@ -12,7 +12,7 @@ CMD*/
 if (user.telegramid == message) {
   Bot.sendMessage("Error: 404, User is not found!")
   return
-} else Bot.blockChat(message)
-Bot.sendMessage(
-  "Successfully banned: " +message
-)
+}
+Bot.blockChat(message)
+Bot.sendMessage("Successfully banned: " + message)
+
