@@ -9,6 +9,5 @@
   aliases: /send-funds
 CMD*/
 
-var msg = message
-var options = {tgid: message}
-Bot.run({command:"onGetIdToSend",options})
+Bot.run({ command: "onGetIdToSend", options: { tgid: message } })
+

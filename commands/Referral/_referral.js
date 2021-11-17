@@ -26,7 +26,7 @@ Bot.sendMessage(
     " Users\n\n⛔ Per Referral " +
     commission +
     " " +
-    bot.currency +
+    currency +
     "!\n\n🔗 Referral Link ⬇️\n" +
     reflink +
     "*"
