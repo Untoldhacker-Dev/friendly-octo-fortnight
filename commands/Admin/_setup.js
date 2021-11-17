@@ -16,7 +16,7 @@ if (isInstalled) {
 }
 var panel = {
   // Panel title
-  title: "Admin Information",
+  title: "Several Panels",
   description: "Please fill here your admin-related information",
   // order index
   index: 0,
