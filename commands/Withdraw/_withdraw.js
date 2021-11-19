@@ -28,7 +28,7 @@ if (user.balance < minimum_withdraw) {
     "_❌ To Withdraw, You have to own at least " +
       minimum_withdraw +
       " " +
-      currency +
+      bot.currency +
       " in Balance !_"
   )
 } else {
