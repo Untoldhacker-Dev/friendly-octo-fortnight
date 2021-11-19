@@ -47,7 +47,7 @@ function doAtractedByUser(refUser) {
   balance.add(+bonus) //Upperline Add
   Bot.sendMessageToChatWithId(
     refUser.chatId,
-    "*🏧 New Referral You Got: <comm> <cur>*"
+    `*🏧 New Referral You Got: ${bonus} ${bot.currency}*`
   )
 }
 
