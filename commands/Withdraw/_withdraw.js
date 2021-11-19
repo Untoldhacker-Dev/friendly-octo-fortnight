@@ -16,13 +16,11 @@ var minimum_withdraw = AdminPanel.getFieldValue({
 
 if (!user.wallet) {
   Bot.sendMessage("_❌ Wallet Not set_")
-  return
 } else if (!minimum_withdraw) {
   Bot.sendMessage(
     "*Oops! minimum withdraw is Unavailable. As it is not set by Admin.*"
   )
-  return
-}
+}else
 if (user.balance < minimum_withdraw) {
   Bot.sendMessage(
     "_❌ To Withdraw, You have to own at least " +
