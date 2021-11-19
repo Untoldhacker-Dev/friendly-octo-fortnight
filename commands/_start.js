@@ -65,8 +65,8 @@ var trackOptions = {
 Libs.ReferralLib.currentUser.track(trackOptions)
 var new_user = Bot.getProperty("new_user")
 if (new_user) {
-  var status = Libs.ResourcesLib.anotherChatRes("status", "global")
-  status.add(1)
+  var totalUsers = Libs.ResourcesLib.anotherChatRes("totalUsers", "global")
+  totalUsers.add(1)
   Bot.setProperty("new_user", false)
 }
 Bot.sendKeyboard(
