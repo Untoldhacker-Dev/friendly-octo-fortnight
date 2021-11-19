@@ -63,11 +63,11 @@ var trackOptions = {
 }
 
 Libs.ReferralLib.currentUser.track(trackOptions)
-var new_user = Bot.getProperty("new_user")
-if (new_user) {
+var old_user = Bot.getProperty("old_user")
+if (!old_user) {
   var totalUsers = Libs.ResourcesLib.anotherChatRes("totalUsers", "global")
   totalUsers.add(1)
-  Bot.setProperty("new_user", false)
+  Bot.setProperty("old_user", true)
 }
 Bot.sendKeyboard(
   "💰 Balance,⚙️Set wallet\n👫 Referral,💲Withdraw\n🎁 Daily Bonus,⛽ Stats",
