@@ -9,14 +9,15 @@
   aliases: 
 CMD*/
 
-var currency = AdminPanel.getFieldValue({
-  panel_name: "AdminInfo", // panel name
-  field_name: "currency" // field name
-})
+var currency = 
 function readUserData() {
   if (!user) {
     return
   }
+  bot.currency = AdminPanel.getFieldValue({
+  panel_name: "AdminInfo", // panel name
+  field_name: "currency" // field name 
+    })
   user.link = Libs.commonLib.getLinkFor(user)
   user.balance = Libs.ResourcesLib.userRes("balance").value()
   user.wallet = User.getProperty("wallet")
