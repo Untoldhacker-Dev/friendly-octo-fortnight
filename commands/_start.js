@@ -73,4 +73,3 @@ Bot.sendKeyboard(
   "💰 Balance,⚙️Set wallet\n👫 Referral,💲Withdraw\n🎁 Daily Bonus,⛽ Stats",
   "*Welcome!*"
 )
-

@@ -38,4 +38,3 @@ if (command.folder == "Admin" && user.telegramid != Admin) {
 function isNumeric(n) {
   return !isNaN(parseFloat(n)) && isFinite(n)
 }
-

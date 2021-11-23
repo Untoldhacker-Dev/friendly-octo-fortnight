@@ -31,4 +31,3 @@ Bot.sendMessage(
     reflink +
     "*"
 )
-

@@ -10,4 +10,3 @@
 CMD*/
 
 Bot.run({ command: "onGetIdToSend", options: { tgid: message } })
-
