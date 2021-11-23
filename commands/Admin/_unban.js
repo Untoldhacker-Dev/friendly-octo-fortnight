@@ -15,4 +15,3 @@ if (user.telegramid == message) {
 }
 Bot.unblockChat(message)
 Bot.sendMessage("Successfully unbanned: " + message)
-

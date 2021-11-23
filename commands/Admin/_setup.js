@@ -116,4 +116,3 @@ AdminPanel.setPanel({
 Bot.sendMessage(
   "*Admin Panel created in app, Please fill the required information.*"
 )
-

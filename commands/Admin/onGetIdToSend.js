@@ -37,4 +37,3 @@ Bot.sendMessageToChatWithId(
   tgid,
   "*🎁 You have just received +" + amount + " from admin.*"
 )
-

@@ -9,17 +9,17 @@
   aliases: 
 CMD*/
 
-function needMoreAmount() {
+function sendMsgNeedMoreAmount() {
   Bot.sendMessage(
     "_❌ Minimum Withdraw " + minimum_withdraw + " " + bot.currency + "_"
   )
   return
 }
-function needLessAmount() {
+function sendMsgLessAmount() {
   Bot.sendMessage(`❌ Maximum Withdraw ${user.balance} ${bot.currency} `)
   return
 }
-function isInvalid() {
+function sendMessageIncorrectAmount() {
   Bot.sendMessage("*Incorrect Amount!\nPlease enter positive numbers only*")
   return
 }
@@ -58,10 +58,13 @@ var lib = Libs.ReferralLib
 var refList = lib.currentUser.refList.get()
 var userPayment = Libs.ResourcesLib.anotherChatRes("totalPayment", "global")
 if (isNaN(message)) {
-  isInvalid()
-} else if (parseFloat(message) < Math.round(minimum_withdraw)) {
-  needMoreAmount()
-} else if (parseFloat(message) > user.balance) {
-  needLessAmount()
-} else sendWithdrawRequest()
+  sendMessageIncorrectAmount()
+}
+if (parseFloat(message) < Math.round(minimum_withdraw)) {
+  sendMsgNeedMoreAmount()
+}
+if (parseFloat(message) > user.balance) {
+  sendMsgLessAmount()
+}
+sendWithdrawRequest()
 

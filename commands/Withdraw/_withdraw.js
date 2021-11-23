@@ -17,8 +17,8 @@ var minimum_withdraw = AdminPanel.getFieldValue({
 if (!user.wallet) {
   Bot.sendMessage("_❌ Wallet Not set_")
   return
-} 
-  if (!minimum_withdraw) {
+}
+if (!minimum_withdraw) {
   Bot.sendMessage(
     "*Oops! minimum withdraw is Unavailable. As it is not set by Admin.*"
   )
@@ -33,9 +33,8 @@ if (user.balance < minimum_withdraw) {
       " in Balance !_"
   )
   return
-} 
-  Bot.sendMessage("*📤 Enter Amount*")
-  var options = { minimum_withdraw: 1 } //We need this just to make sure the sequence /withdraw > onVerifiedBalance
-  Bot.run({ command: "withdrawRequest", options })
 }
+Bot.sendMessage("*📤 Enter Amount*")
+var options = { minimum_withdraw: 1 } //We need this just to make sure the sequence /withdraw > onVerifiedBalance
+Bot.run({ command: "withdrawRequest", options })
 

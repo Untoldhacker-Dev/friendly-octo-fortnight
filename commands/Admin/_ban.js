@@ -15,4 +15,3 @@ if (user.telegramid == message) {
 }
 Bot.blockChat(message)
 Bot.sendMessage("Successfully banned: " + message)
-

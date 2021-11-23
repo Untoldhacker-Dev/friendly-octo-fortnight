@@ -43,12 +43,3 @@ Libs.CooldownLib.chat.watch({
   onWaiting: onWaiting
 })
 
-// get current cooldown res for chat
-let cooldown = Libs.CooldownLib.chat.getCooldown("BonusCooldown")
-
-// for user:
-// let cooldown = Libs.CooldownLib.user.getCooldown("GemBonusCooldown");
-
-cooldown.value() // current cooldown in second
-cooldown.set(60 + cooldown.value()) // add 60 sec to cooldown
-

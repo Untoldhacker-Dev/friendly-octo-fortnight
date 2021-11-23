@@ -18,4 +18,3 @@ Bot.sendMessage(
    bot.currency +
     "\n\n⚜️Refer And Earn More*"
 )
-
