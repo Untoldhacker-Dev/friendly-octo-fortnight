@@ -27,6 +27,19 @@ if (!bonus) {
     "*You won't get any refer commission as admin didn't set it in panel*"
   )
 }
+function onAttracted(refUser){
+  // access to Bonus Res of refUser
+Bot.sendMessageToChatWithId(
+    refUser.chatId,
+    `*🏧 New Referral You Got: ${bonus} ${bot.currency}*`
+  )
+  let refUserBonus = Libs.ResourcesLib.anotherUserRes("balance", refUser.telegramid);
+  refUserBonus.add(+bonus);  // add 100 bonus for friend
+}
+
+Libs.ReferralLib.track({
+   onAttracted: onAttracted
+});
 function hello(message) {
   var greetings = ""
 
@@ -58,7 +71,7 @@ function doAlreadyAttracted() {
 var trackOptions = {
   onTouchOwnLink: doTouchOwnLink,
   onAttracted: doAttracted,
-  onAtractedByUser: doAtractedByUser,
+  //onAtractedByUser: doAtractedByUser,
   onAlreadyAttracted: doAlreadyAttracted
 }
 
@@ -66,7 +79,7 @@ Libs.ReferralLib.currentUser.track(trackOptions)
 var old_user = Bot.getProperty("old_user")
 if (!old_user) {
   var totalUsers = Libs.ResourcesLib.anotherChatRes("totalUsers", "global")
-  totalUsers.add(1)
+  totalUsers.add(+1)
   Bot.setProperty("old_user", true)
 }
 Bot.sendKeyboard(
