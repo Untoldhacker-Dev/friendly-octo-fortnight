@@ -9,7 +9,7 @@
   aliases: 
 CMD*/
 
-var currency = 
+
 function readUserData() {
   if (!user) {
     return
