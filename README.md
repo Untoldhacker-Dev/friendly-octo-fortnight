@@ -1,10 +1,14 @@
-# friendly-octo-fortnight 
+# 💀 CLOSED ON FEBRUARY 20, 2023
 
+<h3> ⚠️⚠️⚠️ THE <a href = "https://github.com/bots-business/friendly-octo-fortnight">PURPOSE </a>OF THIS REPOSITORY WAS SATISFIED ON DECEMBER 6, 2021 AND IS NO LONGER REQUIRED TO BE MAINTAINED BY THE AUTHOR, THIS REPOSITORY IS THEREFORE ARCHIVED ⚠️⚠️⚠️ </h3>
+
+<hr>
+<hr>
+<hr>
 <hr>
 
 # ⁪⁬⁮⁮           ⁪⁬⁮⁮           ⁪⁬⁮⁮     🎉 Powered by - [Bots.Business](https://Bots.Business)
 
-<hr>
 
 <p align="left"> <img src="https://github.com/Untoldhacker-Dev/pictoQue/blob/main/20211017_175229.png" alt="untoldhacker-dev" ; size = 1/> </p>
 
